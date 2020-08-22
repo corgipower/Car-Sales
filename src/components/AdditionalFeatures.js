@@ -1,5 +1,7 @@
 import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
+import { addFeature } from '../actions/carActions';
+import { connect } from 'react-redux';
 
 const AdditionalFeatures = props => {
   return (
@@ -17,5 +19,20 @@ const AdditionalFeatures = props => {
     </div>
   );
 };
+
+// const mapStateToProps = (state) => {
+//   console.log('state', state)
+//   return {
+//     [state.car.features]: state.car.features,
+//   }
+// }
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addFeature: () => dispatch(addFeature),
+//   }
+// }
+
+// export default connect(mapStateToProps, mapDispatchToProps)(AdditionalFeatures);
 
 export default AdditionalFeatures;
