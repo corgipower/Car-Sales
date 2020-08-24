@@ -6,35 +6,21 @@ import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
-import { initialState } from './reducers/carReducer';
 
-const App = (props) => {
-  const state = initialState
+const App = () => {
 
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={props.car} />
+        <Header />
+        <AddedFeatures />
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
-        <Total car={props.car} additionalPrice={props.additionalPrice} />
+        <AdditionalFeatures />
+        <Total />
       </div>
     </div>
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    additionalPrice: state.additionalPrice,
-    car: {
-        features: state.car.features,
-    },
-    additionalFeatures: state.additionalFeatures,
-  }
-};
-
-const mapDispatchToProps = {addFeature, removeFeature};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

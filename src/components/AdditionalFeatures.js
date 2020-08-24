@@ -20,12 +20,11 @@ const AdditionalFeatures = props => {
   );
 };
 
-// const mapStateToProps = (state) => {
-//   console.log('state', state)
-//   return {
-//     [state.car.features]: state.car.features,
-//   }
-// }
+const mapStateToProps = (state) => {
+  return {
+    additionalFeatures: state.additionalFeatures
+  }
+}
 
 // const mapDispatchToProps = dispatch => {
 //   return {
@@ -33,6 +32,4 @@ const AdditionalFeatures = props => {
 //   }
 // }
 
-// export default connect(mapStateToProps, mapDispatchToProps)(AdditionalFeatures);
-
-export default AdditionalFeatures;
+export default connect(mapStateToProps, null)(AdditionalFeatures);
