@@ -39,9 +39,8 @@ export const initialState = {
               additionalPrice: state.additionalPrice - action.obj.price,
               car: {
                 ...state.car,
-                features: [
+                features:
                   state.car.features.filter(feature => feature.id !== action.obj.id),
-                ],
               },
               additionalFeatures: [
                 ...state.additionalFeatures,

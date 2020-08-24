@@ -1,6 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {addFeature, removeFeature} from './actions/carActions'
 
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
